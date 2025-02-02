@@ -84,6 +84,7 @@ body {
     overflow: hidden; /* Prevents scrolling */
     margin: 0; /* Removes default margin */
     touch-action: none; /* Prevents unwanted gestures on mobile */
+    
   }
 
   .navbar.active {
@@ -182,7 +183,7 @@ body {
     justify-content: center;
     align-items: center;
     position:relative;
-    left: 50px;
+    left: 55px;
   }
 
   .follow-heading{
@@ -196,7 +197,7 @@ body {
     }
     .footer-copyright{
       position: relative;
-      left:10px;
+      left:20px;
     }
     .footer-link{
       position: relative;
