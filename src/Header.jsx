@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './styles.css';
 
 const Header = () => {
@@ -16,12 +17,12 @@ const Header = () => {
       </button>
       <nav className={`navbar ${menuActive ? 'active' : ''}`}>
         <ul className="nav-links">
-          <li><a href="/" onClick={() => setMenuActive(false)}>Home</a></li>
-          <li><a href="/projects" onClick={() => setMenuActive(false)}>Projects</a></li>
-          <li><a href="/certificates" onClick={() => setMenuActive(false)}>Certificates</a></li>
-          <li><a href="/about" onClick={() => setMenuActive(false)}>About Me</a></li>
-          <li><a href="/services" onClick={() => setMenuActive(false)}>Services</a></li>
-          <li><a href="/contact" onClick={() => setMenuActive(false)}>Contact</a></li>
+          <li><Link to="/">Home</Link></li>  {/* Remove '#' here */}
+          <li><Link to="/projects">Projects</Link></li>  {/* Remove '#' here */}
+          <li><Link to="/certificates">Certificates</Link></li>  {/* Remove '#' here */}
+          <li><Link to="/about">About Me</Link></li>  {/* Remove '#' here */}
+          <li><Link to="/services">Services</Link></li>  {/* Remove '#' here */}
+          <li><Link to="/contact">Contact</Link></li>  {/* Remove '#' here */}
         </ul>
       </nav>
     </header>

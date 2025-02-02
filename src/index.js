@@ -9,37 +9,25 @@ import Certificate from './Certificate';
 import About from './About';
 import ContactMe from './ContactMe';
 import Services from './Services';
-
-// Function to load the correct component based on the URL
-const getPageComponent = () => {
-  const path = window.location.pathname;
-
-  switch (path) {
-    case '/':
-    case '/index.html':
-      return <Home />;
-    case '/projects':
-      return <Project />;
-    case '/certificates':
-      return <Certificate />;
-    case '/about':
-      return <About />;
-    case '/services':
-      return <Services />;
-    case '/contact':
-      return <ContactMe />;
-    default:
-      return <h2 style={{ textAlign: 'center', marginTop: '50px' }}>Page Not Found</h2>;
-  }
-};
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
   return (
-    <>
+    <Router>
       <Header />
-      <main>{getPageComponent()}</main>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Project />} />
+          <Route path="/certificates" element={<Certificate />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<ContactMe />} />
+          <Route path="*" element={<h2 style={{ textAlign: 'center', marginTop: '50px' }}>Page Not Found</h2>} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </Router>
   );
 };
 
