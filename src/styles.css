@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #121212; /* Dark theme background */
   color: #ffffff; /* White text for better contrast */
+  
 }
 
 /* Header Styling */
@@ -80,6 +81,9 @@ body {
     left: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
     padding: 1rem 0;
+    overflow: hidden; /* Prevents scrolling */
+    margin: 0; /* Removes default margin */
+    touch-action: none; /* Prevents unwanted gestures on mobile */
   }
 
   .navbar.active {
