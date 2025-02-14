@@ -258,8 +258,8 @@ body {
 /* Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
   .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 350px;
+    height: 350px;
   }
   .profile-info{
     position: relative;
