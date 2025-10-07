@@ -11,6 +11,7 @@ const Contact = () => {
   });
 
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false); // Loading state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,11 +20,16 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post("https://portfolio-backend-tl33.onrender.com/contact", formData);
+    setLoading(true);  // Show loading
+    setMessage("");    // Reset message
 
+    try {
+      const response = await axios.post(
+        "https://portfolio-backend-tl33.onrender.com/contact",
+        formData
+      );
       if (response.status === 200) {
-        setMessage("Form submitted successfully!.I will reachout you soon");
+        setMessage("Form submitted successfully! I will reach out to you soon.");
         setFormData({ name: "", email: "", phone: "", purpose: "" });
       } else {
         setMessage("Failed to submit the form. Please try again.");
@@ -32,6 +38,7 @@ const Contact = () => {
       console.error("Error:", error);
       setMessage("An error occurred. Please try again later.");
     }
+    setLoading(false); // Hide loading
   };
 
   return (
@@ -95,11 +102,21 @@ const Contact = () => {
         </div>
 
         {/* Submit Button */}
-        <button type="submit" className="submit-btn">
+        <button type="submit" className="submit-btn" disabled={loading}>
           Submit
         </button>
       </form>
-      {message && <p className="message">{message}</p>}
+
+      {/* Loading Indicator */}
+      {loading && (
+        <div className="loading-indicator">
+          <span className="loader"></span>
+          <span>Submitting...</span>
+        </div>
+      )}
+
+      {/* Message */}
+      {!loading && message && <p className="message">{message}</p>}
     </div>
   );
 };

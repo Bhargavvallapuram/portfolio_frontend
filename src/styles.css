@@ -1,10 +1,9 @@
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #121212; /* Dark theme background */
   color: #ffffff; /* White text for better contrast */
-width:auto;
+  width: auto;
 }
 
 /* Header Styling */
@@ -74,17 +73,16 @@ width:auto;
   .navbar {
     display: none;
     flex-direction: column;
-    width:100%;
+    width: 100%;
     background-color: #000000; /* Black theme for the dropdown */
     position: absolute;
     top: 100%;
     left: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
     padding: 1rem 0;
-    overflow: hidden; /* Prevents scrolling */
-    margin: 0; /* Removes default margin */
-    touch-action: none; /* Prevents unwanted gestures on mobile */
-    
+    overflow: hidden;
+    margin: 0;
+    touch-action: none;
   }
 
   .navbar.active {
@@ -170,45 +168,41 @@ width:auto;
 /* Mobile Responsive Styling */
 @media (max-width: 768px) {
   .portfolio-footer {
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
   }
 
-  .footer-left, .footer-right {
-    width: auto;
+  .footer-left,
+  .footer-right {
+    width: 100%;
     margin-bottom: 1rem;
   }
 
   .social-icons {
     justify-content: center;
     align-items: center;
-    position:relative;
-    left: 55px;
+    position: relative;
+    left: 0;
   }
 
-  .follow-heading{
+  .follow-heading {
     position: relative;
-    left:40px;
+    left: 0;
   }
+
   .footer-right {
     text-align: center;
     position: relative;
-    right: 35px;
-    }
-    .footer-copyright{
-      position: relative;
-      left:20px;
-    }
-    .footer-link{
-      position: relative;
-      right:35px;
-    }
+    right: 0;
+  }
+
+  .footer-link {
+    position: relative;
+    right: 0;
+  }
 }
 
-
 /* Home Page Specific Styling */
-
-/* Profile Image */
 .profile-image {
   width: 150px;
   height: 150px;
@@ -217,7 +211,6 @@ width:auto;
   margin: 20px auto;
 }
 
-/* Download Resume Button */
 .download-btn {
   margin-top: 20px;
   padding: 10px 20px;
@@ -235,7 +228,6 @@ width:auto;
   background-color: #0056b3;
 }
 
-/* Blog Section */
 .blog {
   margin-top: 30px;
   background-color: #1e1e1e;
@@ -261,24 +253,24 @@ width:auto;
     width: 350px;
     height: 350px;
   }
-  .profile-info{
+  .profile-info {
     position: relative;
-    left:10px;
-    right:20px;
+    left: 10px;
+    right: 20px;
     margin-right: 10px;
   }
-  .bt{
+  .bt {
     margin-left: 10px;
   }
 
   .download-btn {
-    width: 175px;;
+    width: 175px;
     margin-top: 15px;
   }
 
   .blog {
     position: relative;
-    left:2.99px;
+    left: 3px;
     margin-top: 20px;
     padding: 15px;
   }
@@ -305,13 +297,13 @@ width:auto;
     position: relative;
     right: 600px;
   }
-  .Blog-Description{
+  .Blog-Description {
     position: relative;
     left: 10px;
   }
 
   .download-btn {
-    width:auto;
+    width: auto;
     padding: 12px 30px;
     margin-top: 30px;
   }
@@ -328,25 +320,24 @@ width:auto;
   .blog p {
     font-size: 1rem;
   }
-  .profile-info{
+  .profile-info {
     position: relative;
-    left:300px;
-    bottom:150px;
-
+    left: 300px;
+    bottom: 150px;
   }
-  .profile{
+  .profile {
     height: 200px;
   }
-  .blog>img{
-    width:200px;
+  .blog > img {
+    width: 200px;
     height: 200px;
   }
-  .bt{
+  .bt {
     position: relative;
     top: 30px;
     margin-left: 20px;
   }
-  .Blog-Description{
+  .Blog-Description {
     width: 1200px;
     position: relative;
     left: 210px;
@@ -363,7 +354,7 @@ width:auto;
 .project-heading {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #ffffff; /* Inherits dark theme styling */
+  color: #ffffff;
 }
 
 /* Project List Styling */
@@ -376,7 +367,7 @@ width:auto;
 
 /* Individual Project Card */
 .project-card {
-  background-color: #1e1e1e; /* Matches dark theme */
+  background-color: #1e1e1e;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   padding: 1rem;
@@ -399,87 +390,6 @@ width:auto;
 
 /* Project Info */
 .project-info {
-  color: #ffffff; /* Text contrast */
-}
-
-.project-name {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-description {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #bbbbbb; /* Subtle text color */
-}
-
-.project-link {
-  text-decoration: none;
-  color: #007bff; /* Highlighted link */
-  font-weight: bold;
-}
-
-.project-link:hover {
-  color: #0056b3;
-}
-
-/* Mobile Responsive Styling */
-@media (max-width: 768px) {
-  .project-card {
-    width: 90%; /* Take more space on smaller screens */
-  }
-}
-
-/* Desktop Specific Adjustments */
-@media (min-width: 1024px) {
-  .project-card {
-    width: 300px; /* Fixed width for consistent grid on larger screens */
-  }
-}
-
-/* Updated Certificate Card Styles */
-
-/* .project-link styles removed */
-
-.project-page {
-  padding: 2rem;
-  text-align: center;
-}
-
-.project-heading {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.project-card {
-  background-color: #1e1e1e;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  padding: 1rem;
-  width: 300px;
-  text-align: left;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-}
-
-.project-image {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.project-info {
   color: #ffffff;
 }
 
@@ -490,15 +400,28 @@ width:auto;
 
 .project-description {
   font-size: 1rem;
+  margin-bottom: 1rem;
   color: #bbbbbb;
 }
 
+.project-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  color: #0056b3;
+}
+
+/* Mobile Responsive Styling */
 @media (max-width: 768px) {
   .project-card {
     width: 90%;
   }
 }
 
+/* Desktop Specific Adjustments */
 @media (min-width: 1024px) {
   .project-card {
     width: 300px;
@@ -556,7 +479,7 @@ width:auto;
   width: 100px;
   height: 100px;
   margin-bottom: 0.5rem;
-  border-radius: 50%; /* Optional: make images circular */
+  border-radius: 50%;
 }
 
 .skill-name {
@@ -564,7 +487,6 @@ width:auto;
   color: #ffffff;
 }
 
-/* Mobile Responsive Styling */
 @media (max-width: 768px) {
   .skills-grid {
     gap: 1rem;
@@ -584,7 +506,6 @@ width:auto;
   }
 }
 
-/* Desktop Specific Adjustments */
 @media (min-width: 1024px) {
   .skills-grid {
     gap: 2rem;
@@ -675,7 +596,6 @@ textarea:focus {
   background-color: #0056b3;
 }
 
-/* Responsive Styling */
 @media (max-width: 768px) {
   .contact-form {
     padding: 1.5rem;
@@ -684,9 +604,9 @@ textarea:focus {
   .submit-btn {
     width: 50%;
   }
-  .form-group{
+  .form-group {
     position: relative;
-    right:15px;
+    right: 15px;
   }
 }
 
@@ -694,12 +614,13 @@ textarea:focus {
   .contact-form {
     padding: 2rem;
   }
-  .form-group{
+  .form-group {
     position: relative;
     right: 10px;
   }
 }
 
+/* Service Plans */
 .service-plans-page {
   padding: 2rem 1rem;
   text-align: center;
@@ -708,12 +629,13 @@ textarea:focus {
 .section-heading {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: wheat;
 }
 
 .intro-text {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color:wheat;
+  color: wheat;
 }
 
 .services-wrapper {
@@ -726,26 +648,22 @@ textarea:focus {
 .service-card {
   width: 300px;
   padding: 1.5rem;
-  background-color: #5555;
+  background-color: #555; /* fixed invalid #5555 */
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-.serviceType{
-  background-color: #555;
-  width:100%;
-}
-
 .service-logo {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .service-title {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 .service-description {
@@ -755,7 +673,7 @@ textarea:focus {
 
 .form-wrapper {
   margin-top: 2rem;
-  background-color: #555;
+  background-color: #555; /* fixed invalid #5555 */
   padding: 2rem;
   border-radius: 10px;
   max-width: 600px;
@@ -778,7 +696,7 @@ textarea:focus {
   border: 1px solid #ccc;
   border-radius: 5px;
   position: relative;
-  right:10px;
+  right: 10px;
 }
 
 .submit-btn {
@@ -796,8 +714,32 @@ textarea:focus {
 }
 
 .message {
-  color: skyblue;/* Or red for errors */
-  font-size: 1.2em;
-  margin-top: 10px;
+  color: skyblue;
   font-size: x-large;
+  margin-top: 10px;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007bff;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  gap: 0.7rem;
+}
+
+.loader {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #007bff;
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
 }

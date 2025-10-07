@@ -6,14 +6,12 @@ const Services = () => {
   const services = [
     {
       title: "Web Development",
-      description:
-        "Create dynamic and responsive websites tailored to your needs.",
+      description: "Create dynamic and responsive websites tailored to your needs.",
       logo: "🌐",
     },
     {
       title: "Debugging",
-      description:
-        "Identify and fix bugs in your applications for smooth functionality.",
+      description: "Identify and fix bugs in your applications for smooth functionality.",
       logo: "🐞",
     },
     {
@@ -24,6 +22,7 @@ const Services = () => {
   ];
 
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     serviceType: "",
     contactName: "",
@@ -43,18 +42,27 @@ const Services = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setMessage("");
     try {
       const response = await axios.post("https://portfolio-backend-tl33.onrender.com/Service", formData);
-      console.log("response",response);
       if (response.status === 200) {
         setMessage("Service request submitted successfully! I will reach out to you soon.");
-
+        setFormData({
+          serviceType: "",
+          contactName: "",
+          email: "",
+          phone: "",
+          projectOrSubject: "",
+          details: "",
+        });
       } else {
         setMessage("Failed to send the service request. Please try again.");
       }
     } catch (error) {
       setMessage("An error occurred. Please try again later.");
     }
+    setLoading(false);
   };
 
   const getPlaceholder = () => {
@@ -171,11 +179,21 @@ const Services = () => {
             required
           ></textarea>
 
-          <button type="submit" className="submit-btn">
+          <button type="submit" className="submit-btn" disabled={loading}>
             Submit
           </button>
         </form>
-        {message && <p className="message">{message}</p>}
+
+        {/* Loading Indicator */}
+        {loading && (
+          <div className="loading-indicator">
+            <span className="loader"></span>
+            <span>Submitting...</span>
+          </div>
+        )}
+
+        {/* Message */}
+        {!loading && message && <p className="message">{message}</p>}
       </div>
     </div>
   );
