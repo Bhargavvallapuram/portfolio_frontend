@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css"; // Importing the provided stylesheet
-import profilePic from "./img/profile.jpg"; // Importing the provided image
+import profilePic from "./img/profile.png"; // Importing the provided image
 import rt from "./img/blogs/react.gif";
 import node from "./img/blogs/node.jpg";
 import pg from  "./img/blogs/PostgreSQL.jpg";
